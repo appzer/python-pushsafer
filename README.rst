@@ -1,8 +1,12 @@
+![Pushsafer](https://www.pushsafer.com/de/assets/logos/logo.png)
+
 ``pushsafer-python`` aims at providing comprehensive Python bindings for the API
-of the `Pushover Notification Service`_ as documented here__.
+of the `Pushsafer Notification Service`_ as documented here__.
 
 .. _Pushsafer Notification Service: https://www.pushsafer.com/ 
 .. __: https://www.pushsafer.com/en/pushapi
+
+Forked from and original created by: [Thibauth](https://github.com/Thibauth/python-pushover)
 
 Installation
 ------------

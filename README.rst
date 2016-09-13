@@ -14,13 +14,7 @@ Forked from and original created by: [Thibauth](https://github.com/Thibauth/pyth
 Installation
 ------------
 
-You can install pushsafer-python from Pypi_ with:
-
-.. code-block:: bash
-
-    $ pip install pushsafer-python
-
-Or you can install it directly from GitHub_:
+You can install it directly from GitHub_:
 
 .. code-block:: bash
 
@@ -28,7 +22,6 @@ Or you can install it directly from GitHub_:
     cd pushsafer-python
     pip install .
 
-.. _Pypi: https://pypi.python.org/pypi/pushsafer-python/
 .. _GitHub: https://github.com/appzer/pushsafer-python
 
 Overview

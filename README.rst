@@ -1,4 +1,7 @@
-![Pushsafer](https://www.pushsafer.com/de/assets/logos/logo.png)
+.. image:: https://www.pushsafer.com/de/assets/logos/logo.png
+    :alt: Pushsafer.com
+    :width: 100%
+    :align: center
 
 ``pushsafer-python`` aims at providing comprehensive Python bindings for the API
 of the `Pushsafer Notification Service`_ as documented here__.

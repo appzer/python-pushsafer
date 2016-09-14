@@ -2,13 +2,13 @@
 
 from setuptools import setup
 
-setup(name='pushsafer-python',
+setup(name='python-pushsafer',
       version='0.1',
       description="Comprehensive bindings and command line utility for the "
                   "Pushsafer.com notification service",
       long_description=open("README.rst").read() + "\n"
       + open("AUTHORS.rst").read() + "\n" + open("CHANGES.rst").read(),
-      url='https://github.com/appzer/pushsafer-python',
+      url='https://github.com/appzer/python-pushsafer',
       author='Kevin Siml',
       author_email='info@appzer.de',
       py_modules=['pushsafer'],

@@ -39,7 +39,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'pushsafer-python'
+project = u'python-pushsafern'
 copyright = u'2016'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -104,7 +104,7 @@ html_theme_path = ['_themes/flask-sphinx-themes']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "pushsafer-python"
+html_title = "python-pushsafer"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None

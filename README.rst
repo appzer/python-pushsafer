@@ -3,7 +3,7 @@
     :width: 100%
     :align: center
 
-``pushsafer-python`` aims at providing comprehensive Python bindings for the API
+``python-pushsafer`` aims at providing comprehensive Python bindings for the API
 of the `Pushsafer Notification Service`_ as documented here__.
 
 .. _Pushsafer Notification Service: https://www.pushsafer.com/ 

@@ -18,11 +18,11 @@ You can install it directly from GitHub_:
 
 .. code-block:: bash
 
-    git clone https://github.com/appzer/pushsafer-python.git
-    cd pushsafer-python
+    git clone https://github.com/appzer/python-pushsafer.git
+    cd python-pushsafer
     pip install .
 
-.. _GitHub: https://github.com/appzer/pushsafer-python
+.. _GitHub: https://github.com/appzer/python-pushsafer
 
 Overview
 --------
@@ -51,7 +51,7 @@ initialize the module at the same time:
 Command line
 ~~~~~~~~~~~~
 
-``pushsafer-python`` also comes with a command line utility ``pushsafer`` that
+``python-pushsafer`` also comes with a command line utility ``pushsafer`` that
 you can use as follows:
 
 .. code-block:: bash
@@ -81,7 +81,7 @@ You can have additional sections and specify a device as well:
     privatekey=bbbbbb
     device=233
 
-``pushsafer-python`` will attempt to read the configuration from
+``python-pushsafer`` will attempt to read the configuration from
 ``~/.pushsaferrc`` by default. The section to read can be specified by using the
 ``profile`` argument. With the configuration file above, you can send a message
 by simply doing:

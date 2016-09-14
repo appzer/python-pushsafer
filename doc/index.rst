@@ -1,4 +1,4 @@
-pushsafer-python documentation
+python-pushsafer documentation
 =============================
 
 .. include:: ../README.rst

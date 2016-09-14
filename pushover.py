@@ -163,7 +163,7 @@ def main():
     parser = ArgumentParser(description="Send a message to pushsafer.",
                             formatter_class=RawDescriptionHelpFormatter,
                             epilog="""
-For more details and bug reports, see: https://github.com/appzer/pushsafer-python""")
+For more details and bug reports, see: https://github.com/appzer/python-pushsafer""")
     parser.add_argument("--privatekey", help="Pushsafer private key")
     parser.add_argument("message", help="message to send")
     parser.add_argument("--title", "-t", help="message title")

@@ -36,7 +36,7 @@ function with a valid private key. Thus, a typical use of the
     from pushsafer import init, Client
 
     init("<privatekey>")
-    Client("").send_message("Hello!", title="Hello", icon="1", sound="4", vibration="2", device="323")
+    Client("").send_message("Message", "Hello", "1", "4", "2", "323", "https://www.pushsafer.com", "Open Pushsafer", "0", "", "", "")
 
 You can also pass the ``privatekey`` optional argument to ``Client`` to
 initialize the module at the same time:
@@ -46,53 +46,8 @@ initialize the module at the same time:
     from pushsafer import Client
 
     client = Client("", privatekey="<privatekey>")
-    client.send_message("Hello!", title="Hello", icon="1", sound="4", vibration="2", device="323")
+    client.send_message("Message", "Hello", "1", "4", "2", "323", "https://www.pushsafer.com", "Open Pushsafer", "0", "", "", "")
 
-Command line
-~~~~~~~~~~~~
-
-``python-pushsafer`` also comes with a command line utility ``pushsafer`` that
-you can use as follows:
-
-.. code-block:: bash
-
-    pushsafer --privatekey <privatekey> "Hello!"
-
-Use ``pushsafer --help`` to see the list of available options.
-
-Configuration
-~~~~~~~~~~~~~
-
-Both the ``pushsafer`` module and the ``pushsafer`` command line utility support
-reading arguments from a configuration file.
-
-The most basic configuration file looks like this:
-
-.. code-block:: ini
-
-    [Default]
-    privatekey=aaaaaa
-
-You can have additional sections and specify a device as well:
-
-.. code-block:: ini
-
-    [my-iPhone]
-    privatekey=bbbbbb
-    device=233
-
-``python-pushsafer`` will attempt to read the configuration from
-``~/.pushsaferrc`` by default. The section to read can be specified by using the
-``profile`` argument. With the configuration file above, you can send a message
-by simply doing:
-
-.. code-block:: python
-
-    from pushsafer import Client
-
-    Client().send_message("Hello!", title="Hello", icon="1", sound="4", vibration="2", device="323")
-
-or ``pushsafer --title "Hello" "Hello!"`` from the command line.
 
 API
 ---

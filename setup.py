@@ -3,8 +3,8 @@
 from setuptools import setup
 
 setup(name='python-pushsafer',
-      version='0.1',
-      description="Comprehensive bindings and command line utility for the "
+      version='0.2',
+      description="Comprehensive bindings for the "
                   "Pushsafer.com notification service",
       long_description=open("README.rst").read() + "\n"
       + open("AUTHORS.rst").read() + "\n" + open("CHANGES.rst").read(),

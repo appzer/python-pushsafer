@@ -36,7 +36,7 @@ function with a valid private key. Thus, a typical use of the
     from pushsafer import init, Client
 
     init("<privatekey>")
-    Client("").send_message("Message", "Hello", "1", "4", "2", "323", "https://www.pushsafer.com", "Open Pushsafer", "0", "", "", "")
+    Client("").send_message("Message", "Hello", "323", "1", "4", "2", "https://www.pushsafer.com", "Open Pushsafer", "0", "", "", "")
 
 You can also pass the ``privatekey`` optional argument to ``Client`` to
 initialize the module at the same time:
@@ -46,10 +46,11 @@ initialize the module at the same time:
     from pushsafer import Client
 
     client = Client("", privatekey="<privatekey>")
-    client.send_message("Message", "Hello", "1", "4", "2", "323", "https://www.pushsafer.com", "Open Pushsafer", "0", "", "", "")
+    client.send_message("Message", "Hello", "323", "1", "4", "2", "https://www.pushsafer.com", "Open Pushsafer", "0", "", "", "")
 
 Params
 ------
+client.send_message("Message", "Title", "Device or Device Group ID", "Icon", "Sound", "Vibration", "URL", "URL Title", "Time2Live", "Image 1", "Image 2", "Image 3")
 	
 API
 ---

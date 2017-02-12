@@ -48,7 +48,9 @@ initialize the module at the same time:
     client = Client("", privatekey="<privatekey>")
     client.send_message("Message", "Hello", "1", "4", "2", "323", "https://www.pushsafer.com", "Open Pushsafer", "0", "", "", "")
 
-
+Params
+------
+	
 API
 ---
 

@@ -48,7 +48,7 @@ class Request:
             raise InitError
 
         payload["k"] = PRIVATEKEY
-        request = getattr(requests, request_type)(url, params=payload)
+        request = getattr(requests, request_type)(url, params=payload, verify=False)
         self.answer = request.json()
 
     def __str__(self):

@@ -1,6 +1,11 @@
 Changes
 -------
 
+0.3 (2017-11-28)
+~~~~~~~~~~~~~~~~
+
+ignore verifying the SSL certficate (trust self signed certificates)
+
 0.2 (2017-02-12)
 ~~~~~~~~~~~~~~~~
 

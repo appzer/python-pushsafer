@@ -1,7 +1,7 @@
 Changes
 -------
 
-0.4 (2018-08- 9)
+0.4 (2018-08-19)
 ~~~~~~~~~~~~~~~~
 
 add new pushsafer parameter priority, retry, expire, answer

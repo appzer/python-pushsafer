@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='python-pushsafer',
-      version='0.3',
+      version='0.4',
       description="Comprehensive bindings for the "
                   "Pushsafer.com notification service",
       long_description=open("README.rst").read() + "\n"

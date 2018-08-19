@@ -1,6 +1,6 @@
-# pushsafer 0.2
+# pushsafer 0.4
 #
-# Copyright (C) 2016  Kevin Siml <info@appzer.de>
+# Copyright (C) 2018  Kevin Siml <info@appzer.de>
 # forked from https://github.com/Thibauth/python-pushover
 
 # This program is free software: you can redistribute it and/or modify
@@ -66,7 +66,7 @@ class Client:
     def __init__(self, device=None, privatekey=None):
         self.devices = []
 
-    def send_message(self, message, title, device, icon, sound, vibration, url, urltitle, time2live, picture1, picture2, picture3):
+    def send_message(self, message, title, device, icon, sound, vibration, url, urltitle, time2live, priority, retry, expire, answer, picture1, picture2, picture3):
 
         payload = {"m": message}
 		
@@ -93,6 +93,18 @@ class Client:
 
         if time2live:
             payload["l"] = time2live
+	
+        if priority:
+            payload["pr"] = priority
+	
+        if retry:
+            payload["re"] = retry
+	
+        if expire:
+            payload["ex"] = expire
+	
+        if answer:
+            payload["a"] = answer
 
         if picture1:
             payload["p"] = picture1

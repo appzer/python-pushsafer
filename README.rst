@@ -16,8 +16,8 @@ Installation
 
 You can install it directly from GitHub_:
 
-.. code-block:: bash
-
+.. code-block::
+    bash
     git clone https://github.com/appzer/python-pushsafer.git
     cd python-pushsafer
     pip install .
@@ -31,8 +31,9 @@ After being imported, the module must be initialized by calling the ``init``
 function with a valid private key. Thus, a typical use of the
 ``pushsafer`` module looks like this:
 
-.. code-block:: python
-
+.. code-block::
+    python
+    
     from pushsafer import init, Client
 
     init("<privatekey>")
@@ -41,7 +42,8 @@ function with a valid private key. Thus, a typical use of the
 You can also pass the ``privatekey`` optional argument to ``Client`` to
 initialize the module at the same time:
 
-.. code-block:: python
+.. code-block::
+    python
 
     from pushsafer import Client
 

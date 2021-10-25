@@ -14,7 +14,13 @@ Forked from and original created by: [Thibauth](https://github.com/Thibauth/pyth
 Installation
 ------------
 
-You can install it directly from GitHub_:
+Install from pip:
+
+.. code-block::
+   bash
+   pip install python-pushsafer
+
+or you can install it directly from GitHub_:
 
 .. code-block::
     bash
@@ -27,28 +33,15 @@ You can install it directly from GitHub_:
 Overview
 --------
 
-After being imported, the module must be initialized by calling the ``init``
-function with a valid private key. Thus, a typical use of the
-``pushsafer`` module looks like this:
-
-.. code-block::
-    python
-    
-    from pushsafer import init, Client
-
-    init("<privatekey>")
-    Client("").send_message("Message", "Hello", "323", "1", "4", "2", "https://www.pushsafer.com", "Open Pushsafer", "0", "2", "60", "600", "1", "", "", "")
-
-You can also pass the ``privatekey`` optional argument to ``Client`` to
-initialize the module at the same time:
-
-.. code-block::
+..code-block::
     python
 
     from pushsafer import Client
 
-    client = Client("", privatekey="<privatekey>")
-    client.send_message("Message", "Hello", "323", "1", "4", "2", "https://www.pushsafer.com", "Open Pushsafer", "0", "1", "120", "1200", "0", "", "", "")
+    client = Client("<privatekey>")
+    resp = client.send_message("Message", "Hello", "323", "1", "4", "2", "https://www.pushsafer.com", "Open Pushsafer", "0", "2", "60", "600", "1", "", "", "")
+    print(resp)
+
 
 Params
 ------

@@ -2,6 +2,7 @@
 #
 # Copyright (C) 2018  Kevin Siml <info@appzer.de>
 # forked from https://github.com/Thibauth/python-pushover
+# re-written by 2e0byo
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,104 +16,72 @@
 
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-import time
-import os
 
 import requests
 
-__all__ = ["init", "Client", "MessageRequest",
-           "InitError"]
+__all__ = ["init", "Client", "MessageRequest", "InitError"]
 
 MESSAGE_URL = "https://www.pushsafer.com/api"
 
-PRIVATEKEY = None
+
+class PushSaferError(Exception):
+    pass
 
 
-def init(privatekey):
-
-    global PRIVATEKEY
-    PRIVATEKEY = privatekey
-
-
-class InitError(Exception):
-
-    def __str__(self):
-        return ("No privatekey provided. Init the pushsafer module by "
-                "calling the init function")
-
-
-class Request:
-
-    def __init__(self, request_type, url, payload):
-        if not PRIVATEKEY:
-            raise InitError
-
-        payload["k"] = PRIVATEKEY
-        request = getattr(requests, request_type)(url, params=payload, verify=False)
-        self.answer = request.json()
-
-    def __str__(self):
-        return str(self.answer)
-
-
-class MessageRequest(Request):
-
-    def __init__(self, payload):
-        Request.__init__(self, "post", MESSAGE_URL, payload)
+class MessageSendError(PushSaferError):
+    pass
 
 
 class Client:
+    ENDPOINT = "https://www.pushsafer.com/api"
 
-    def __init__(self, device=None, privatekey=None):
-        self.devices = []
+    def __init__(self, privatekey):
+        self._key = privatekey
 
-    def send_message(self, message, title, device, icon, sound, vibration, url, urltitle, time2live, priority, retry, expire, answer, picture1, picture2, picture3):
+    def send_message(
+        self,
+        message,
+        title=None,
+        device=None,
+        icon=None,
+        sound=None,
+        vibration=None,
+        url=None,
+        urltitle=None,
+        time2live=None,
+        priority=None,
+        retry=None,
+        expire=None,
+        answer=None,
+        picture1=None,
+        picture2=None,
+        picture3=None,
+    ):
+        payload = {
+            "m": message,
+            "d": device,
+            "i": icon,
+            "s": sound,
+            "v": vibration,
+            "t": title,
+            "u": url,
+            "ut": urltitle,
+            "l": time2live,
+            "pr": priority,
+            "re": retry,
+            "ex": expire,
+            "a": answer,
+            "p": picture1,
+            "p2": picture2,
+            "p3": picture3,
+            "k": self._key,
+        }
+        return self._send(payload)
 
-        payload = {"m": message}
-		
-        if device:
-            payload["d"] = device
-			
-        if icon:
-            payload["i"] = icon
-
-        if sound:
-            payload["s"] = sound
-			
-        if vibration:
-            payload["v"] = vibration
-			
-        if title:
-            payload["t"] = title
-
-        if url:
-            payload["u"] = url
-
-        if urltitle:
-            payload["ut"] = urltitle
-
-        if time2live:
-            payload["l"] = time2live
-	
-        if priority:
-            payload["pr"] = priority
-	
-        if retry:
-            payload["re"] = retry
-	
-        if expire:
-            payload["ex"] = expire
-	
-        if answer:
-            payload["a"] = answer
-
-        if picture1:
-            payload["p"] = picture1
-
-        if picture2:
-            payload["p2"] = picture2
-
-        if picture3:
-            payload["p3"] = picture3
-
-        return MessageRequest(payload)
+    def _send(self, payload: dict):
+        payload = {k: v for k, v in payload.items() if v}
+        r = requests.post(self.ENDPOINT, data=payload)
+        if r.status_code != 200:
+            raise MessageSendError(f"Failed to send message, got {r.json()}")
+        else:
+            return r.json()

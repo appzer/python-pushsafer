@@ -50,7 +50,23 @@ Params
 .. code-block::
    python
 
-   client.send_message("Message", "Title", "Device or Device Group ID", "Icon", "Sound", "Vibration", "URL", "URL Title", "Time2Live", "Priority", "Retry", "Expire", "Answer", "Image 1", "Image 2", "Image 3")
+   client.send_message(
+                       "Message",
+                       "Title",
+                       "Device or Device Group ID",
+                       "Icon",
+                       "Sound",
+                       "Vibration",
+                       "URL",
+                       "URL Title",
+                       "Time2Live",
+                       "Priority",
+                       "Retry",
+                       "Expire",
+                       "Answer",
+                       "Image 1",
+                       "Image 2",
+                       "Image 3")
 	
 API
 ---

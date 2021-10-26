@@ -18,12 +18,14 @@ Install from pip:
 
 .. code-block::
    bash
+
    pip install python-pushsafer
 
 or you can install it directly from GitHub_:
 
 .. code-block::
     bash
+
     git clone https://github.com/appzer/python-pushsafer.git
     cd python-pushsafer
     pip install .
@@ -33,7 +35,7 @@ or you can install it directly from GitHub_:
 Overview
 --------
 
-..code-block::
+.. code-block::
     python
 
     from pushsafer import Client

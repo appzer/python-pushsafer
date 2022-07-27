@@ -9,9 +9,8 @@ of the `Pushsafer Notification Service`_ as documented here__.
 .. _Pushsafer Notification Service: https://www.pushsafer.com/ 
 .. __: https://www.pushsafer.com/en/pushapi
 
-Forked from and original created by: [Thibauth](https://github.com/Thibauth/python-pushover)
+Forked from and original created by: Thibauth https://github.com/Thibauth/python-pushover
 
-[https://github.com/appzer/python-pushsafer/](https://github.com/appzer/python-pushsafer/)
 
 Installation
 ------------

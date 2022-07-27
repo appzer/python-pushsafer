@@ -11,6 +11,8 @@ of the `Pushsafer Notification Service`_ as documented here__.
 
 Forked from and original created by: [Thibauth](https://github.com/Thibauth/python-pushover)
 
+[https://github.com/appzer/python-pushsafer/](https://github.com/appzer/python-pushsafer/)
+
 Installation
 ------------
 

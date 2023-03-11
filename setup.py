@@ -16,6 +16,5 @@ setup(
     author_email="info@appzer.de",
     py_modules=["pushsafer"],
     install_requires=["requests>=1.0"],
-    use_2to3=True,
     license="GNU GPLv3",
 )

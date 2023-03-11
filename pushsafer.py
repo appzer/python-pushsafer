@@ -1,4 +1,4 @@
-# pushsafer 0.4
+# pushsafer 1.1
 #
 # Copyright (C) 2018  Kevin Siml <info@appzer.de>
 # forked from https://github.com/Thibauth/python-pushover
@@ -52,7 +52,10 @@ class Client:
         priority=None,
         retry=None,
         expire=None,
+        confirm=None,
         answer=None,
+        answeroptions=None,
+        answerforce=None,
         picture1=None,
         picture2=None,
         picture3=None,
@@ -70,7 +73,10 @@ class Client:
             "pr": priority,
             "re": retry,
             "ex": expire,
+            "cr": confirm,
             "a": answer,
+            "ao": answeroptions,
+            "af": answerforce,
             "p": picture1,
             "p2": picture2,
             "p3": picture3,

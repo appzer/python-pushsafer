@@ -42,7 +42,7 @@ Overview
     from pushsafer import Client
 
     client = Client("<privatekey>")
-    resp = client.send_message("Message", "Hello", "323", "1", "4", "2", "https://www.pushsafer.com", "Open Pushsafer", "0", "2", "60", "600", "1", "", "", "")
+    resp = client.send_message("Message", "Hello", "323", "1", "4", "2", "https://www.pushsafer.com", "Open Pushsafer", "0", "2", "60", "600", "10", "1", "yes|no|maybe", "1", "", "", "")
     print(resp)
 
 
@@ -64,7 +64,10 @@ Params
                        "Priority",
                        "Retry",
                        "Expire",
+		       "Confirm",
                        "Answer",
+		       "AnswerOptions",
+		       "AnswerForce",
                        "Image 1",
                        "Image 2",
                        "Image 3")

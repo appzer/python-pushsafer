@@ -1,6 +1,11 @@
 Changes
 -------
 
+1.1 (2023-03-11)
+------------------
+
+add new pushsafer parameter answer options, answer force, confirm
+
 1.0 (2021-10-25)
 ------------------
 
